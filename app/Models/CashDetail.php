@@ -12,4 +12,7 @@ class CashDetail extends Model
      * @var string
      */
     protected $table = 'cash_detail';
+
+    public const RECEH = 0;
+    public const TOTAL = -1;
 }
