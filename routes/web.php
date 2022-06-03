@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Laporan;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,6 +18,11 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::prefix('laporan')->group(function () {
+    Route::redirect('/', 'laporan/bulanan');
+    Route::get('bulanan', [Laporan\BulananController::class, 'index'])->name('laporan.bulanan');
+    Route::get('iuran', [Laporan\IuranController::class, 'index'])->name('laporan.iuran');
+});
 
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
