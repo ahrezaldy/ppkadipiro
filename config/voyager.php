@@ -42,7 +42,7 @@ return [
     */
 
     'models' => [
-       // 'namespace' => 'App\\Models\\',
+       'namespace' => 'App\\Models\\',
     ],
 
     /*
@@ -80,7 +80,7 @@ return [
 
     'database' => [
         'tables' => [
-            'hidden' => ['migrations', 'data_rows', 'data_types', 'menu_items', 'password_resets', 'permission_role', 'settings'],
+            'hidden' => ['migrations', 'password_resets', 'failed_jobs', 'personal_access_tokens', 'data_rows', 'data_types', 'menu_items', 'permission_role', 'user_roles', 'translations', 'settings'],
         ],
         'autoload_migrations' => true,
     ],
