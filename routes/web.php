@@ -22,6 +22,7 @@ Route::prefix('laporan')->group(function () {
     Route::redirect('/', 'laporan/bulanan');
     Route::get('bulanan', [Laporan\BulananController::class, 'index'])->name('laporan.bulanan');
     Route::get('iuran', [Laporan\IuranController::class, 'index'])->name('laporan.iuran');
+    Route::get('cash', [Laporan\CashDetailController::class, 'index'])->name('laporan.cash');
 });
 
 Route::group(['prefix' => 'admin'], function () {
