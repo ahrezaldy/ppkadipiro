@@ -12,4 +12,13 @@ class House extends Model
      * @var string
      */
     protected $table = 'house';
+
+    /**
+     * The attributes that should be cast.
+     *
+     * @var array
+     */
+    protected $casts = [
+        'last_iuran' => 'date:Y-m-d',
+    ];
 }
