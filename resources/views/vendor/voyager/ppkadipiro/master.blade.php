@@ -90,7 +90,6 @@
         </div>
     </div>
 </div>
-@include('voyager::partials.app-footer')
 
 <!-- Javascript Libs -->
 <script type="text/javascript" src="{{ voyager_asset('js/app.js') }}"></script>
