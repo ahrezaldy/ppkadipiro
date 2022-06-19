@@ -12,15 +12,15 @@ class CashDetailObservers
             return;
         }
 
-        $addCash = 0;
+        $redactCash = ($model->nominal * $model->getOriginal('count'));
+        $addCash = ($model->nominal * $model->count);
         if ($model->nominal === CashDetail::RECEH) {
+            $redactCash = $model->getOriginal('count');
             $addCash = $model->count;
-        } else{
-            $addCash = ($model->nominal * $model->count);
         }
 
         $dataTotal = CashDetail::where('nominal', CashDetail::TOTAL)->first();
-        $dataTotal->count += $addCash;
+        $dataTotal->count += ($addCash - $redactCash);
         $dataTotal->save();
     }
 }
