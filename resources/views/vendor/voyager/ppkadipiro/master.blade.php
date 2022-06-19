@@ -44,7 +44,15 @@
 <div class="app-container">
     <div class="fadetoblack visible-xs"></div>
     <div class="row content-container">
-        <nav class="navbar navbar-default navbar-fixed-top navbar-top" style="display: none;"></nav>
+        <nav class="navbar navbar-default navbar-fixed-top navbar-top">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button class="hamburger btn-link">
+                        <span class="hamburger-inner"></span>
+                    </button>
+                </div>
+            </div>
+        </nav>
         @include('voyager::ppkadipiro.sidebar')
         <script>
             (function(){
