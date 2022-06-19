@@ -38,6 +38,8 @@
                                     @foreach ($house->last_iuran_map as $hasPaid)
                                         @if ($hasPaid)
                                             <td><i class="voyager-check"></i></td>
+                                        @else
+                                            <td></td>
                                         @endif
                                     @endforeach
                                     <td></td>
